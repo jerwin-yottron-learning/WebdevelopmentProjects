@@ -10,17 +10,19 @@ body {
     background-color: aqua;
   }
 
-  .search .btn{
-    width: 100px;
+  .search{
+    
+display: flex;
   }
+  
+.search .input{
+  border-color:red;
+  border-radius: 2px;
+  transition: 0.2s ease;
+ 
+}
 
-  .search .input {
-    background-color: #fff;
-    border: 0;
-    font-size: 18px;
-    padding: 15px;
-    height: 50px;
-    width: 50px;
-    transition: width 0.3s ease;
-  }
+
+ 
+
   
