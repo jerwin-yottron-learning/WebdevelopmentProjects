@@ -82,7 +82,14 @@ color: #fff;
 
 }
 .form label span{
-  display: inline-block;
-font-size: 18px;
+display: inline-block;
+font-size: 16px;
 min-width: 5px;
+transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+}
+.form input:focus + label span,
+.form input:valid + label span {
+  color: rgb(255, 255, 255);
+  transform: translateY(-26px);
 }
