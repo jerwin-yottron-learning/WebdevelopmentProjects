@@ -7,6 +7,7 @@ counters.forEach(counter=>{
         const target =  +counter.getAttribute('data-target'); 
         const c = +counter.innerText; //to get the div value
         const increment = target/200;
+        console.log(target)
         if(c<target){
             counter.innerText=(`${Math.ceil(increment + c)}`)
             setTimeout(updateCounter,1)
