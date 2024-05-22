@@ -5,10 +5,10 @@ let clickTime = 0
 let timesClicked = 0
 
 loveMe.addEventListener('click', (e) => {
-    if(clickTime === 0) {
+    if (clickTime === 0) {
         clickTime = new Date().getTime()
     } else {
-        if((new Date().getTime() - clickTime) < 800) {
+        if ((new Date().getTime() - clickTime) < 800) {
             createHeart(e)
             clickTime = 0
         } else {
@@ -27,16 +27,11 @@ const createHeart = (e) => {
 
     const leftOffset = e.target.offsetLeft
     const topOffset = e.target.offsetTop
-
     const xInside = x - leftOffset
     const yInside = y - topOffset
-
     heart.style.top = `${yInside}px`
     heart.style.left = `${xInside}px`
-
     loveMe.appendChild(heart)
-
     times.innerHTML = ++timesClicked
-
     setTimeout(() => heart.remove(), 1000)
 }
